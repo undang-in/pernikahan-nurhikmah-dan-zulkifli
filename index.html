@@ -321,6 +321,7 @@
             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
             position: relative;
             display: inline-block;
+            white-space: nowrap;
         }
         
         .couple-names:after {
@@ -346,17 +347,17 @@
         .countdown {
             display: flex;
             justify-content: center;
-            gap: 0.5rem;
-            margin: 3rem 0;
-            flex-wrap: wrap;
+            gap: 0.3rem;
+            flex-wrap: nowrap;
         }
         
         .countdown-item {
             background: rgba(212, 175, 55, 0.2);
             color: white;
-            padding: 1.5rem 1rem;
-            border-radius: 10px;
-            min-width: 100px;
+            padding: 0.5rem;
+            border-radius: 5px;
+            min-width: 50px;
+            text-align: center;
             backdrop-filter: blur(5px);
             border: 1px solid var(--gold);
             transition: all 0.3s ease;
@@ -370,7 +371,7 @@
         }
         
         .countdown-number {
-            font-size: 0.8rem;
+            font-size: 1rem;
             font-weight: 600;
             background: linear-gradient(to right, var(--gold), var(--rose-gold));
             -webkit-background-clip: text;
@@ -378,11 +379,12 @@
         }
         
         .countdown-label {
-            font-size: 0.6rem;
+            font-size: 0.5rem;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-top: 0.5rem;
+            letter-spacing: 1px;
+            margin-top: 0.2rem;
             font-weight: 500;
+            color: white;
         }
         
         /* Section 2: Couple Introduction */
@@ -808,21 +810,33 @@
             font-size: 0.9rem;
             color: #666;
         }
-
-        .comment-list {
+        /* Comment Section Styles */
+        .comment-container {
             max-width: 800px;
             margin: 3rem auto 0;
-            text-align: left;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            padding: 0;
+            position: relative;
+            border-left: 4px solid var(--gold);
+            max-height: 400px; /* Adjust height as needed */
+            overflow-y: auto;
+        }
+
+        .comment-list {
+            padding: 1.5rem;
         }
 
         .comment-item {
-            background: white;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            position: relative;
-            border-left: 4px solid var(--gold);
+            padding: 1rem 0;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .comment-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
         }
 
         .comment-header {
@@ -835,10 +849,11 @@
         .comment-name {
             font-weight: 600;
             color: var(--dark);
+            font-size: 0.9rem;
         }
 
         .comment-attendance {
-            font-size: 0.8rem;
+            font-size: 0.7rem;
             padding: 0.2rem 0.5rem;
             border-radius: 50px;
             background: var(--light);
@@ -858,14 +873,35 @@
         .comment-text {
             color: #555;
             line-height: 1.6;
-            margin-top: 0.5rem;
+            margin: 0.5rem 0;
+            font-size: 0.85rem;
+            text-align: left;
+            padding-right: 1rem;
         }
 
         .comment-date {
-            font-size: 0.8rem;
+            font-size: 0.7rem;
             color: #999;
-            margin-top: 0.5rem;
             text-align: right;
+        }
+
+        /* Custom scrollbar */
+        .comment-container::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .comment-container::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 0 10px 10px 0;
+        }
+
+        .comment-container::-webkit-scrollbar-thumb {
+            background: #D4AF37;
+            border-radius: 10px;
+        }
+
+        .comment-container::-webkit-scrollbar-thumb:hover {
+            background: #B7950B;
         }
 
         .sticker-picker {
@@ -1039,6 +1075,7 @@
             display: flex;
             align-items: center;
             gap: 0.8rem;
+            white-space: nowrap;
         }
 
         .gift-method-icon {
@@ -1224,18 +1261,32 @@
             }
             
             .countdown {
-                gap: 1rem;
+                display: flex;
+                justify-content: center;
+                gap: 0.5rem;
             }
             
             .countdown-item {
-                min-width: 80px;
-                padding: 1rem 0.5rem;
+                color: white;
+                padding: 0.5rem;
+                border-radius: 5px;
+                min-width: 50px;
+                text-align: center;
             }
             
             .countdown-number {
-                font-size: 2rem;
+                font-size: 1rem;
+                font-weight: 600;
             }
-            
+            .countdown-label {
+                font-size: 0.5rem;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                margin-top: 0.2rem;
+                font-weight: 500;
+                color: white;
+            }
+
             .section-title {
                 font-size: 2.2rem;
             }
@@ -1538,15 +1589,17 @@
             </div>
 
             <!-- Daftar Komentar -->
-            <div class="comment-list" id="commentList">
-                <!-- Komentar akan muncul di sini -->
-                <div class="comment-item animate-fadeInUp delay-3">
-                    <div class="comment-header">
-                        <span class="comment-name">Contoh Nama</span>
-                        <span class="comment-attendance hadir">Hadir</span>
+            <div class="comment-container">
+                <div class="comment-list" id="commentList">
+                    <!-- Komentar akan muncul di sini -->
+                    <div class="comment-item">
+                        <div class="comment-header">
+                            <span class="comment-name">Contoh Nama</span>
+                            <span class="comment-attendance hadir">Hadir</span>
+                        </div>
+                        <p class="comment-text">Ini adalah contoh ucapan. Semoga pernikahan kalian bahagia selalu! ❤️</p>
+                        <div class="comment-date">12 Des 2025, 10:30</div>
                     </div>
-                    <p class="comment-text">Ini adalah contoh ucapan. Semoga pernikahan kalian bahagia selalu! ❤️</p>
-                    <div class="comment-date">12 Des 2025, 10:30</div>
                 </div>
             </div>
 
@@ -1764,13 +1817,25 @@
                 const attendanceClass = comment.attendance === 'hadir' ? 'hadir' : 'tidak';
                 const attendanceText = comment.attendance === 'hadir' ? 'Hadir' : 'Tidak Hadir';
 
+                // Konversi tanggal ke format Indonesia dan zona waktu WITA
+                const dateObj = new Date(comment.date);
+                const formattedDate = new Intl.DateTimeFormat('id-ID', {
+                    timeZone: 'Asia/Makassar', // Zona WITA
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    second: '2-digit'
+                }).format(dateObj);
+
                 commentItem.innerHTML = `
                     <div class="comment-header">
                         <span class="comment-name">${comment.name}</span>
                         <span class="comment-attendance ${attendanceClass}">${attendanceText}</span>
                     </div>
                     <p class="comment-text">${comment.text}</p>
-                    <div class="comment-date">${comment.date}</div>
+                    <div class="comment-date">${formattedDate}</div>
                 `;
 
                 commentList.appendChild(commentItem);
