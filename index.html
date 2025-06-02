@@ -1,0 +1,1860 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Pernikahan Nurhikmah & Zulkifli</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --gold: #D4AF37;
+            --dark-gold: #B7950B;
+            --dark: #222222;
+            --light: #F9F7F4;
+            --soft-gold: rgba(212, 175, 55, 0.2);
+            --translucent-white: rgba(255, 255, 255, 0.85);
+            --translucent-dark: rgba(0, 0, 0, 0.7);
+            --rose-gold: #B76E79;
+            --ivory: #FFFFF0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--dark);
+            background-color: var(--light);
+            overflow-x: hidden;
+            line-height: 1.7;
+        }
+        
+        /* Cover Page */
+        .cover-page {
+            height: 100vh;
+            background-image: url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cover-page::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 100%);
+            z-index: 1;
+        }
+        
+        .floating-petal {
+            position: absolute;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="%23D4AF37" d="M50 0C30 20 10 30 0 50c10 20 30 30 50 50 20-20 40-30 50-50C90 30 70 20 50 0z"/></svg>');
+            background-size: contain;
+            background-repeat: no-repeat;
+            opacity: 0.6;
+            z-index: 2;
+            animation: float 15s infinite linear;
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.6;
+            }
+            90% {
+                opacity: 0.6;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        .invitation-container {
+            position: relative;
+            z-index: 3;
+            padding: 1rem;
+            max-width: 500px;
+            width: 80%;
+            perspective: 1000px;
+        }
+
+        .couple-photo-small {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            margin-top: 1rem;
+            border: 2px solid var(--gold);
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .couple-photo-small img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }        
+        
+        .envelope {
+            border: 2px solid var(--gold);
+            padding: 3rem 2rem;
+            position: relative;
+            background: var(--translucent-dark);
+            backdrop-filter: blur(8px);
+            color: white;
+            transform-style: preserve-3d;
+            transition: all 0.5s ease;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+        }
+        
+        .envelope:hover {
+            transform: translateY(-5px) rotateX(5deg) rotateY(5deg);
+            box-shadow: 0 30px 70px rgba(0, 0, 0, 0.7);
+        }
+        
+        .envelope:before, .envelope:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 2px solid var(--gold);
+            top: 10px;
+            left: 10px;
+            z-index: -1;
+            border-radius: 5px;
+            opacity: 0.7;
+        }
+        
+        .envelope:after {
+            top: 20px;
+            left: 20px;
+            opacity: 0.4;
+        }
+        
+        .title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--gold);
+            letter-spacing: 5px;
+            font-weight: 500;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .couple-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            margin: 1.5rem 0;
+            color: var(--gold);
+            line-height: 1.1;
+            font-weight: 600;
+            text-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(to right, var(--gold), var(--rose-gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hikmah {
+            font-family: 'Playfair Display', serif;
+            margin: 0.5rem 0;
+            font-size: 1.2rem;
+            color: var(--gold);
+            letter-spacing: 2px;
+            position: relative;
+            display: block;
+        }
+        
+        .hikmah:before, .to:after {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 1px;
+            background: var(--gold);
+            top: 50%;
+        }
+        
+        .hikmah:before {
+            left: -40px;
+        }
+        
+        .hikmah:after {
+            right: -40px;
+        }        
+        .to {
+            margin-top: 1rem;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .to:before, .to:after {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 1px;
+            background: var(--gold);
+            top: 50%;
+        }
+        
+        .to:before {
+            left: -40px;
+        }
+        
+        .to:after {
+            right: -40px;
+        }
+        
+        .guest-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1rem;
+            border-bottom: 1px solid var(--gold);
+            padding-bottom: 0.5rem;
+            display: block;
+            margin: 1rem 0;
+            letter-spacing: 1px;
+        }
+        
+        .btn-open {
+            background: transparent;
+            color: var(--gold);
+            border: 1px solid var(--gold);
+            padding: 1rem 3rem;
+            font-size: 1rem;
+            margin-top: 2rem;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            letter-spacing: 2px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 50px;
+            font-weight: 500;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn-open:hover {
+            background: var(--gold);
+            color: var(--dark);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+        }
+        
+        .btn-open:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: 0.5s;
+        }
+        
+        .btn-open:hover:before {
+            left: 100%;
+        }
+        
+        /* Main Content */
+        .main-content {
+            display: none;
+        }
+        
+        /* Section 1: Hero with Timer */
+        .section-hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .couple-photo {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--gold);
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            transition: all 0.5s ease;
+        }
+        
+        .couple-photo:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.4);
+        }
+        
+        .couple-names {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(to right, var(--gold), var(--rose-gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .couple-names:after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(to right, var(--gold), var(--rose-gold));
+            border-radius: 3px;
+        }
+        
+        .wedding-date {
+            font-size: 1.5rem;
+            letter-spacing: 3px;
+            margin-bottom: 2rem;
+            font-weight: 400;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin: 3rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .countdown-item {
+            background: rgba(212, 175, 55, 0.2);
+            color: white;
+            padding: 1.5rem 1rem;
+            border-radius: 10px;
+            min-width: 100px;
+            backdrop-filter: blur(5px);
+            border: 1px solid var(--gold);
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .countdown-item:hover {
+            transform: translateY(-5px);
+            background: rgba(212, 175, 55, 0.3);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+        }
+        
+        .countdown-number {
+            font-size: 2rem;
+            font-weight: 600;
+            background: linear-gradient(to right, var(--gold), var(--rose-gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .countdown-label {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 0.5rem;
+            font-weight: 500;
+        }
+        
+        /* Section 2: Couple Introduction */
+        .section-couple {
+            padding: 6rem 2rem;
+            text-align: center;
+            background-color: white;
+            position: relative;
+        }
+        
+        .section-couple:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), transparent);
+            z-index: 1;
+        }
+        
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: var(--dark);
+            margin-bottom: 3rem;
+            position: relative;
+            display: inline-block;
+            font-weight: 600;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(to right, var(--gold), var(--rose-gold));
+            border-radius: 3px;
+        }
+        
+        .opening-message {
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            line-height: 1.8;
+            font-size: 1.2rem;
+            color: #555;
+        }
+        
+        .couple-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 4rem;
+            margin-top: 4rem;
+        }
+        
+        .bride, .groom {
+            flex: 1;
+            min-width: 300px;
+            padding: 2rem;
+            position: relative;
+            transition: all 0.5s ease;
+        }
+        
+        .bride:hover, .groom:hover {
+            transform: translateY(-10px);
+        }
+        
+        .couple-portrait {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1.5rem;
+            border: 4px solid var(--gold);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.5s ease;
+        }
+        
+        .couple-portrait:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.3);
+        }
+        
+        .couple-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+            font-weight: 600;
+        }
+        
+        .parents-name {
+            font-style: italic;
+            margin-top: 1rem;
+            color: #666;
+        }
+        
+        /* Section 3: Event Schedule */
+        .section-events {
+            padding: 6rem 2rem;
+            background-color: var(--light);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .section-events:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: linear-gradient(to bottom, white, transparent);
+            z-index: 1;
+        }
+        
+        .events-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 4rem;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .event-card {
+            flex: 1;
+            min-width: 320px;
+            background: white;
+            padding: 3rem 2rem;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.5s ease;
+            position: relative;
+            overflow: hidden;
+            border-top: 4px solid var(--gold);
+        }
+        
+        .event-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(to right, var(--gold), var(--rose-gold));
+            z-index: 1;
+        }
+        
+        .event-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.2);
+        }
+        
+        .event-icon {
+            font-size: 3rem;
+            color: var(--gold);
+            margin-bottom: 1.5rem;
+        }
+        
+        .event-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--gold);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+        
+        .event-date, .event-time, .event-location {
+            margin-bottom: 0.8rem;
+            color: #555;
+        }
+        
+        .event-date {
+            font-weight: 600;
+            color: var(--dark);
+        }
+        
+        .event-location {
+            margin-top: 1.5rem;
+            font-weight: 500;
+            color: var(--dark);
+        }
+        /* Gallery Section */
+        .section-gallery {
+            padding: 6rem 2rem;
+            background-color: white;
+            text-align: center;
+            position: relative;
+        }
+
+        .section-gallery:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: linear-gradient(to bottom, var(--light), transparent);
+            z-index: 1;
+        }
+
+        .gallery-intro {
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            color: #555;
+            font-size: 1.1rem;
+        }
+
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            aspect-ratio: 1/1;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.2);
+        }
+
+        .gallery-photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover .gallery-photo {
+            transform: scale(1.05);
+        }        
+        /* Section 4: Guest Messages */
+                .section-messages {
+            padding: 6rem 2rem;
+            background-color: white;
+            text-align: center;
+            position: relative;
+        }
+
+        .section-messages:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: linear-gradient(to bottom, var(--light), transparent);
+            z-index: 1;
+        }
+
+        .message-form {
+            max-width: 600px;
+            margin: 3rem auto;
+            padding: 2.5rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            border-top: 4px solid var(--gold);
+            position: relative;
+        }
+
+        .message-form:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(to right, var(--gold), var(--rose-gold));
+            z-index: 1;
+        }
+
+        .message-form label {
+            display: block;
+            margin: 1rem 0 0.5rem;
+            font-weight: 500;
+            color: var(--dark);
+        }
+
+        .message-form input,
+        .message-form select,
+        .message-form textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .message-form input:focus,
+        .message-form select:focus,
+        .message-form textarea:focus {
+            border-color: var(--gold);
+            outline: none;
+            box-shadow: 0 0 0 3px var(--soft-gold);
+        }
+
+        .message-form textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .inline-stats {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1rem;
+            font-size: 0.85rem;
+            color: #555;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .inline-stats .stat {
+            background: var(--light);
+            border: 1px solid #eee;
+            padding: 0.4rem 0.8rem;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            flex: 1;
+            justify-content: center;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1.5rem;
+            gap: 1rem;
+        }
+
+        .btn-primary, .btn-secondary {
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        .btn-primary {
+            background: linear-gradient(to right, var(--gold), var(--rose-gold));
+            color: white;
+            flex: 1;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: var(--dark);
+            border: 1px solid #ddd;
+        }
+
+        .btn-secondary:hover {
+            background: #f5f5f5;
+        }
+
+        .attendance-stats {
+            max-width: 600px;
+            margin: 3rem auto;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .stat-boxes {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .stat-box {
+            flex: 1;
+            min-width: 200px;
+            padding: 1.5rem;
+            background: var(--light);
+            border-radius: 10px;
+            border: 1px solid #eee;
+            transition: all 0.3s ease;
+        }
+
+        .stat-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .stat-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: var(--gold);
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .comment-list {
+            max-width: 800px;
+            margin: 3rem auto 0;
+            text-align: left;
+        }
+
+        .comment-item {
+            background: white;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            position: relative;
+            border-left: 4px solid var(--gold);
+        }
+
+        .comment-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            align-items: center;
+        }
+
+        .comment-name {
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .comment-attendance {
+            font-size: 0.8rem;
+            padding: 0.2rem 0.5rem;
+            border-radius: 50px;
+            background: var(--light);
+            color: var(--dark);
+        }
+
+        .comment-attendance.hadir {
+            background: rgba(76, 175, 80, 0.1);
+            color: #4CAF50;
+        }
+
+        .comment-attendance.tidak {
+            background: rgba(244, 67, 54, 0.1);
+            color: #F44336;
+        }
+
+        .comment-text {
+            color: #555;
+            line-height: 1.6;
+            margin-top: 0.5rem;
+        }
+
+        .comment-date {
+            font-size: 0.8rem;
+            color: #999;
+            margin-top: 0.5rem;
+            text-align: right;
+        }
+
+        .sticker-picker {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .sticker-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            max-width: 500px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .sticker-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .sticker-item {
+            font-size: 2rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-align: center;
+            padding: 0.5rem;
+            border-radius: 5px;
+        }
+
+        .sticker-item:hover {
+            background: #f5f5f5;
+            transform: scale(1.1);
+        }
+
+        .close-sticker {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #999;
+        }
+
+        .close-sticker:hover {
+            color: var(--dark);
+        }
+        .delete-comment {
+            background-color: #ff4d4f;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            margin-top: 5px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .delete-comment:hover {
+            background-color: #d9363e;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .button-group {
+                flex-direction: column;
+            }
+            
+            .stat-boxes {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .stat-box {
+                min-width: 100%;
+            }
+            
+            .sticker-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* Section 5: Digital Gifts */
+        .section-gifts {
+            padding: 6rem 2rem;
+            background-color: var(--light);
+            text-align: center;
+            position: relative;
+        }
+
+        .section-gifts:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: linear-gradient(to bottom, white, transparent);
+            z-index: 1;
+        }
+
+        .gift-container {
+            max-width: 800px;
+            margin: 3rem auto 0;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 2.5rem;
+            border-top: 4px solid var(--gold);
+            position: relative;
+            text-align: left;
+        }
+
+        .gift-container:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(to right, var(--gold), var(--rose-gold));
+            z-index: 1;
+        }
+
+        .gift-intro {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .gift-methods {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .gift-method {
+            flex: 1;
+            min-width: 300px;
+            padding: 1.5rem;
+            border-radius: 10px;
+            background: white;
+            border: 1px solid #eee;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .gift-method:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.1);
+            border-color: var(--gold);
+        }
+
+        .gift-method-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--gold);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .gift-method-icon {
+            font-size: 1.8rem;
+        }
+
+        .gift-detail {
+            margin: 1rem 0;
+            padding: 0.8rem;
+            background: var(--light);
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .gift-label {
+            font-weight: 500;
+            color: #555;
+        }
+
+        .gift-value {
+            font-weight: 600;
+            color: var(--dark);
+            word-break: break-all;
+            text-align: right;
+        }
+
+        .copy-btn {
+            background: var(--gold);
+            color: white;
+            border: none;
+            padding: 0.3rem 0.8rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .copy-btn:hover {
+            background: var(--dark-gold);
+            transform: translateY(-2px);
+        }
+
+        .copy-btn.copied {
+            background: #4CAF50;
+        }
+
+        .gift-note {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: #777;
+            text-align: center;
+            font-style: italic;
+        }
+
+        .qr-code {
+            width: 150px;
+            height: 150px;
+            margin: 1rem auto;
+            background: white;
+            padding: 0.5rem;
+            border: 1px solid #eee;
+            border-radius: 5px;
+        }
+
+        .qr-code img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .gift-method {
+                min-width: 100%;
+            }
+            
+            .gift-detail {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+            
+            .gift-value {
+                text-align: left;
+                width: 100%;
+            }
+        }      
+
+        /* Footer */
+        .footer {
+            background: linear-gradient(135deg, var(--dark), #111);
+            color: white;
+            text-align: center;
+            padding: 5rem 2rem;
+            position: relative;
+        }
+        
+        .footer:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: linear-gradient(to bottom, var(--light), transparent);
+            z-index: 1;
+        }
+        
+        .footer-text {
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.8;
+            font-size: 1.1rem;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .signature {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin-top: 2rem;
+            color: var(--gold);
+            position: relative;
+            z-index: 2;
+        }
+        
+        /* Floating Music Player */
+        .music-player {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 100;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .music-player:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.5);
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .couple-name {
+                font-size: 3.5rem;
+            }
+            
+            .couple-names {
+                font-size: 3rem;
+            }
+            
+            .section-title {
+                font-size: 2.5rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .couple-name {
+                font-size: 3rem;
+            }
+            
+            .couple-names {
+                font-size: 2.5rem;
+            }
+            
+            .wedding-date {
+                font-size: 1.2rem;
+            }
+            
+            .countdown {
+                gap: 1rem;
+            }
+            
+            .countdown-item {
+                min-width: 80px;
+                padding: 1rem 0.5rem;
+            }
+            
+            .countdown-number {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 2.2rem;
+            }
+            
+            .couple-portrait, .couple-photo {
+                width: 180px;
+                height: 180px;
+            }
+            
+            .message-form, .gift-container {
+                padding: 2rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .couple-name {
+                font-size: 2.5rem;
+            }
+            
+            .guest-name {
+                font-size: 1.5rem;
+            }
+            
+            .couple-names {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .couple-portrait, .couple-photo {
+                width: 150px;
+                height: 150px;
+            }
+            
+            .event-card {
+                min-width: 260px;
+            }
+            
+            .music-player {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fadeInUp {
+            animation: fadeInUp 1s ease forwards;
+        }
+        
+        .delay-1 {
+            animation-delay: 0.2s;
+        }
+        
+        .delay-2 {
+            animation-delay: 0.4s;
+        }
+        
+        .delay-3 {
+            animation-delay: 0.6s;
+        }
+        
+        .delay-4 {
+            animation-delay: 0.8s;
+        }
+    </style>
+</head>
+<body>
+    <!-- Cover Page -->
+    <div class="cover-page" id="coverPage">
+        <!-- Floating petals -->
+        <div class="floating-petal" style="width: 30px; height: 30px; top: 10%; left: 10%; animation-duration: 20s;"></div>
+        <div class="floating-petal" style="width: 40px; height: 40px; top: 20%; left: 80%; animation-duration: 25s;"></div>
+        <div class="floating-petal" style="width: 25px; height: 25px; top: 70%; left: 15%; animation-duration: 18s;"></div>
+        <div class="floating-petal" style="width: 35px; height: 35px; top: 80%; left: 70%; animation-duration: 22s;"></div>
+        <div class="floating-petal" style="width: 30px; height: 30px; top: 30%; left: 50%; animation-duration: 17s;"></div>
+        
+        <div class="invitation-container">
+            <div class="envelope animate__animated animate__fadeIn">
+                <div class="title">The Wedding Of</div>
+                <div class="hikmah">Nurhikmah & Zulkifli</div>
+                <div class="couple-photo-small">
+                    <img src="images/foto3.jpg" alt="Couple Photo">
+                </div>
+                <div class="to">Kepada Yth.</div>
+                <div class="guest-name" id="guestName">Ahmad</div>
+                <button class="btn-open" id="openInvitation">Buka Undangan</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content" id="mainContent">
+        <!-- Section 1: Hero with Timer -->
+        <section class="section-hero">
+            <img src="images/foto3.jpg" alt="Couple Photo" class="couple-photo animate-fadeInUp">
+            <h1 class="couple-names animate-fadeInUp delay-1">Nurhikmah & Zulkifli</h1>
+            <p class="wedding-date animate-fadeInUp delay-1">Rabu, 11 Juni 2025</p>
+            
+            <div class="countdown">
+                <div class="countdown-item animate-fadeInUp delay-2">
+                    <div class="countdown-number" id="days">00</div>
+                    <div class="countdown-label">Hari</div>
+                </div>
+                <div class="countdown-item animate-fadeInUp delay-2">
+                    <div class="countdown-number" id="hours">00</div>
+                    <div class="countdown-label">Jam</div>
+                </div>
+                <div class="countdown-item animate-fadeInUp delay-3">
+                    <div class="countdown-number" id="minutes">00</div>
+                    <div class="countdown-label">Menit</div>
+                </div>
+                <div class="countdown-item animate-fadeInUp delay-3">
+                    <div class="countdown-number" id="seconds">00</div>
+                    <div class="countdown-label">Detik</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Couple Introduction -->
+        <section class="section-couple">
+            <h2 class="section-title animate-fadeInUp">Assalamu'alaikum</h2>
+            <p class="opening-message animate-fadeInUp delay-1">
+                Dengan memohon rahmat dan ridho Allah Subhanahu Wa Ta'ala, 
+                kami bermaksud menyelenggarakan pernikahan putra-putri kami 
+                yang insya Allah akan dilaksanakan pada:
+            </p>
+            
+            <div class="couple-info">
+                <div class="groom animate-fadeInUp delay-2">
+                    <img src="images/foto1.jpg" alt="Groom" class="couple-portrait">
+                    <h3 class="couple-name">Nurhikmah</h3>
+                    <p>Putri dari <br>Alm. Bapak H. Rasanuddin & Ibu Cahyani</p>
+                </div>
+                
+                <div class="bride animate-fadeInUp delay-3">
+                    <img src="images/foto2.jpg" alt="Bride" class="couple-portrait">
+                    <h3 class="couple-name">Zulkifli</h3>
+                    <p>Putra dari <br>Bapak Rahman & Ibu Nengsih</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Event Schedule -->
+        <section class="section-events">
+            <h2 class="section-title animate-fadeInUp">Jadwal Acara</h2>
+            
+            <div class="events-container">
+                <div class="event-card animate-fadeInUp delay-1">
+                    <div class="event-icon">
+                        <i class="fas fa-mosque"></i>
+                    </div>
+                    <h3 class="event-title">Akad Nikah</h3>
+                    <p class="event-date">Rabu, 11 Juni 2025</p>
+                    <p class="event-time">10.00 WITA - Selesai</p>
+                    <p class="event-location">Barayya, Desa Ulugalung<br>Kec. Eremerasa, Kab. Bantaeng</p>
+                </div>
+                
+                <div class="event-card animate-fadeInUp delay-2">
+                    <div class="event-icon">
+                        <i class="fas fa-glass-cheers"></i>
+                    </div>
+                    <h3 class="event-title">Resepsi</h3>
+                    <p class="event-date">Kamis, 12 Juni 2025</p>
+                    <p class="event-time">09.00 WITA - Selesai</p>
+                    <p class="event-location">Barayya, Desa Ulugalung<br>Kec. Eremerasa, Kab. Bantaeng</p>
+                </div>
+            </div>
+        </section>
+        <!-- Section 4: Gallery -->
+        <section class="section-gallery">
+            <h2 class="section-title animate-fadeInUp">Galeri Kami</h2>
+            <p class="gallery-intro animate-fadeInUp delay-1">
+                Beberapa momen indah kami yang ingin kami bagikan dengan Anda.
+            </p>
+            
+            <div class="gallery-container">
+                <div class="gallery-item animate-fadeInUp delay-1">
+                    <img src="images/foto9.jpg" alt="Gallery Photo 1" class="gallery-photo">
+                </div>
+                <div class="gallery-item animate-fadeInUp delay-2">
+                    <img src="images/foto7.jpg" alt="Gallery Photo 2" class="gallery-photo">
+                </div>
+                <div class="gallery-item animate-fadeInUp delay-3">
+                    <img src="images/foto8.jpg" alt="Gallery Photo 3" class="gallery-photo">
+                </div>
+                <div class="gallery-item animate-fadeInUp delay-1">
+                    <img src="images/foto4.jpg" alt="Gallery Photo 4" class="gallery-photo">
+                </div>
+                <div class="gallery-item animate-fadeInUp delay-2">
+                    <img src="images/foto5.jpg" alt="Gallery Photo 5" class="gallery-photo">
+                </div>
+                <div class="gallery-item animate-fadeInUp delay-3">
+                    <img src="images/foto6.jpg" alt="Gallery Photo 6" class="gallery-photo">
+                </div>
+                <div class="gallery-item animate-fadeInUp delay-3">
+                    <img src="images/foto10.jpg" alt="Gallery Photo 6" class="gallery-photo">
+                </div>
+                <div class="gallery-item animate-fadeInUp delay-3">
+                    <img src="images/foto11.jpg" alt="Gallery Photo 6" class="gallery-photo">
+                </div>
+            </div>
+        </section>
+        <!-- Section 4 -->
+        <section class="section-gifts">
+            <h2 class="section-title animate-fadeInUp"><i class="fas fa-gift"></i> Kirim Hadiah</h2>
+            
+            <div class="gift-container animate-fadeInUp delay-1">
+                <p class="gift-intro">
+                    Bagi Anda yang ingin memberikan tanda kasih untuk mempelai, 
+                    dapat mengirimkan melalui rekening bank atau e-wallet berikut ini. 
+                    Terima kasih atas kebahagiaan yang Anda turut berikan.
+                </p>
+                
+                <div class="gift-methods">
+                    <!-- Bank Transfer Method -->
+                    <div class="gift-method">
+                        <h3 class="gift-method-title">
+                            <i class="fas fa-university gift-method-icon"></i>
+                            Transfer Bank
+                        </h3>
+                        
+                        <div class="gift-detail">
+                            <span class="gift-label">Nama Bank:</span>
+                            <span class="gift-value">Bank BRI</span>
+                        </div>
+                        
+                        <div class="gift-detail">
+                            <span class="gift-label">Nomor Rekening:</span>
+                            <span class="gift-value">024001016575534</span>
+                        </div>
+                        
+                        <div class="gift-detail">
+                            <span class="gift-label">Atas Nama:</span>
+                            <span class="gift-value">Nurhikmah</span>
+                        </div>
+                        
+                        <button class="copy-btn" data-copy="024001016575534">
+                            <i class="far fa-copy"></i> Salin Nomor Rekening
+                        </button>
+                        
+                        <div class="qr-code">
+                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=BRI%20024001016575534%20Nurhikmah" alt="QR Code BCA">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section 5: Guest Messages (Komentar) -->
+        <section class="section-messages">
+            <h2 class="section-title animate-fadeInUp"><i class="fas fa-comments"></i> Ucapan & Doa</h2>
+
+            <!-- Form Ucapan -->
+            <div class="message-form animate-fadeInUp delay-1">
+                <form id="commentForm">
+                    <label for="name">Nama</label>
+                    <input type="text" id="name" required placeholder="Masukkan nama Anda">
+
+                    <label for="attendance">Konfirmasi Kehadiran</label>
+                    <select id="attendance" required>
+                        <option value="hadir">Saya berencana hadir</option>
+                        <option value="tidak">Maaf saya tidak bisa hadir</option>
+                    </select>
+
+                    <label for="comment">Pesan</label>
+                    <textarea id="comment" required placeholder="Tulis ucapan dan doa untuk mempelai..."></textarea>
+
+                    <div class="button-group">
+                        <button type="button" class="btn-secondary" id="stickerBtn"><i class="far fa-smile"></i> Tambah Stiker</button>
+                        <button type="submit" class="btn-primary"><i class="fas fa-paper-plane"></i> Kirim Ucapan</button>
+                    </div>
+                    <!-- Tambahkan statistik di sini -->
+                    <div class="inline-stats">
+                        <div class="stat" id="attendingInline">
+                            <i class="fas fa-check-circle"></i> <span id="attendingCount">0</span> hadir
+                        </div>
+                        <div class="stat" id="notAttendingInline">
+                            <i class="fas fa-times-circle"></i> <span id="notAttendingCount">0</span> tidak hadir
+                        </div>
+                        <div class="stat" id="totalCommentsInline">
+                            <i class="fas fa-comment-dots"></i> <span id="totalComments">0</span> ucapan
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Daftar Komentar -->
+            <div class="comment-list" id="commentList">
+                <!-- Komentar akan muncul di sini -->
+                <div class="comment-item animate-fadeInUp delay-3">
+                    <div class="comment-header">
+                        <span class="comment-name">Contoh Nama</span>
+                        <span class="comment-attendance hadir">Hadir</span>
+                    </div>
+                    <p class="comment-text">Ini adalah contoh ucapan. Semoga pernikahan kalian bahagia selalu! ❤️</p>
+                    <div class="comment-date">12 Des 2025, 10:30</div>
+                </div>
+            </div>
+
+            <!-- Sticker Picker Modal -->
+            <div class="sticker-picker" id="stickerPicker">
+                <div class="sticker-container">
+                    <span class="close-sticker" id="closeSticker">&times;</span>
+                    <h3>Pilih Stiker</h3>
+                    <div class="sticker-grid">
+                        <div class="sticker-item" data-sticker="❤️">❤️</div>
+                        <div class="sticker-item" data-sticker="😊">😊</div>
+                        <div class="sticker-item" data-sticker="🎉">🎉</div>
+                        <div class="sticker-item" data-sticker="💐">💐</div>
+                        <div class="sticker-item" data-sticker="🥂">🥂</div>
+                        <div class="sticker-item" data-sticker="✨">✨</div>
+                        <div class="sticker-item" data-sticker="🎊">🎊</div>
+                        <div class="sticker-item" data-sticker="💖">💖</div>
+                        <div class="sticker-item" data-sticker="👰">👰</div>
+                        <div class="sticker-item" data-sticker="🤵">🤵</div>
+                        <div class="sticker-item" data-sticker="💑">💑</div>
+                        <div class="sticker-item" data-sticker="🎁">🎁</div>
+                        <div class="sticker-item" data-sticker="🥳">🥳</div>
+                        <div class="sticker-item" data-sticker="🙏">🙏</div>
+                        <div class="sticker-item" data-sticker="😍">😍</div>
+                        <div class="sticker-item" data-sticker="💕">💕</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p class="footer-text animate-fadeInUp">
+                Terima kasih atas doa dan restu yang telah diberikan. 
+                Semoga Allah SWT membalas semua kebaikan Anda.
+            </p>
+            <p class="signature animate-fadeInUp delay-1">Nurhikmah & Zulkifli</p>
+        </footer>
+    </div>
+
+    <!-- Floating Music Player -->
+    <div class="music-player" id="musicPlayer" title="Putar Musik">
+        <i class="fas fa-music"></i>
+        <audio id="bgMusic" loop>
+            <source src="music/musik1.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <script>
+        // Open Invitation
+        document.getElementById('openInvitation').addEventListener('click', function() {
+            document.getElementById('coverPage').style.display = 'none';
+            document.getElementById('mainContent').style.display = 'block';
+            document.body.style.overflow = 'auto';
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+            
+            // Play music
+            document.getElementById('bgMusic').play();
+        });
+
+        // Function to get URL parameter
+        function getUrlParameter(name) {
+            name = name.replace(/[\[\]]/g, '\\$&');
+            var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                results = regex.exec(window.location.href);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        }
+
+        // Set guest name from URL parameter
+        document.addEventListener('DOMContentLoaded', function() {
+            var guestName = getUrlParameter('to');
+            if (guestName) {
+                document.getElementById('guestName').textContent = guestName;
+            }
+            
+        });
+
+        // Countdown Timer
+        function updateCountdown() {
+            const weddingDate = new Date('June 11, 2025 10:00:00').getTime();
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+            
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            document.getElementById('days').textContent = days.toString().padStart(2, '0');
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+        }
+        
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // Konfigurasi Google Sheets API
+        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzI10uHdEGm_mimoed6GDeY3CpvkrYIfy1DLczHNAniceRg3fTZWaHDKG_oBm4-vA6R/exec';
+
+        // Fungsi Komentar
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load komentar dari Google Sheets
+            loadComments();
+            
+            // Form submission
+            document.getElementById('commentForm').addEventListener('submit', async function(e) {
+                e.preventDefault();
+                
+                const name = document.getElementById('name').value.trim();
+                const attendance = document.getElementById('attendance').value;
+                const commentText = document.getElementById('comment').value.trim();
+                
+                if (name && commentText) {
+                    try {
+                        const formData = new FormData();
+                        formData.append('name', name);
+                        formData.append('attendance', attendance);
+                        formData.append('comment', commentText);
+                        
+                        const response = await fetch(SCRIPT_URL, {
+                            method: 'POST',
+                            body: formData
+                        });
+                        
+                        const result = await response.json();
+                        
+                        if (result.status === "success") {
+                            // Reset form
+                            this.reset();
+                            
+                            // Reload komentar
+                            loadComments();
+                            
+                            // Show success message
+                            alert('Ucapan Anda telah terkirim. Terima kasih!');
+                        } else {
+                            throw new Error(result.message || 'Gagal menyimpan data');
+                        }
+                    } catch (error) {
+                        console.error('Error:', error);
+                        alert('Terjadi kesalahan saat mengirim ucapan: ' + error.message);
+                    }
+                }
+            });
+            
+            // Fungsi untuk memuat komentar dari Google Sheets
+            async function loadComments() {
+                try {
+                    const response = await fetch(`${SCRIPT_URL}?t=${Date.now()}`);
+                    const result = await response.json();
+                    
+                    if (result.status === "success") {
+                        updateCommentList(result.comments);
+                        updateStats(result.comments);
+                    } else {
+                        throw new Error(result.message || 'Gagal memuat komentar');
+                    }
+                } catch (error) {
+                    console.error('Error loading comments:', error);
+                    alert('Gagal memuat komentar: ' + error.message);
+                }
+            }
+            
+            // Sticker picker functionality (tetap sama seperti sebelumnya)
+            const stickerBtn = document.getElementById('stickerBtn');
+            const stickerPicker = document.getElementById('stickerPicker');
+            const closeSticker = document.getElementById('closeSticker');
+            const stickerItems = document.querySelectorAll('.sticker-item');
+            const commentField = document.getElementById('comment');
+            
+            stickerBtn.addEventListener('click', function() {
+                stickerPicker.style.display = 'flex';
+            });
+            
+            closeSticker.addEventListener('click', function() {
+                stickerPicker.style.display = 'none';
+            });
+            
+            stickerItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    const sticker = this.getAttribute('data-sticker');
+                    commentField.value += sticker;
+                    stickerPicker.style.display = 'none';
+                    commentField.focus();
+                });
+            });
+            
+            stickerPicker.addEventListener('click', function(e) {
+                if (e.target === this) {
+                    this.style.display = 'none';
+                }
+            });
+        });
+
+        // Fungsi untuk memperbarui daftar komentar
+        function updateCommentList(comments) {
+            const commentList = document.getElementById('commentList');
+
+            if (comments.length === 0) {
+                commentList.innerHTML = '<p style="text-align: center; color: #666;">Belum ada ucapan. Jadilah yang pertama mengirimkan ucapan!</p>';
+                return;
+            }
+
+            commentList.innerHTML = '';
+
+            comments.forEach(comment => {
+                const commentItem = document.createElement('div');
+                commentItem.className = 'comment-item';
+
+                const attendanceClass = comment.attendance === 'hadir' ? 'hadir' : 'tidak';
+                const attendanceText = comment.attendance === 'hadir' ? 'Hadir' : 'Tidak Hadir';
+
+                commentItem.innerHTML = `
+                    <div class="comment-header">
+                        <span class="comment-name">${comment.name}</span>
+                        <span class="comment-attendance ${attendanceClass}">${attendanceText}</span>
+                    </div>
+                    <p class="comment-text">${comment.text}</p>
+                    <div class="comment-date">${comment.date}</div>
+                `;
+
+                commentList.appendChild(commentItem);
+            });
+        }
+
+        // Fungsi untuk memperbarui statistik
+        function updateStats(comments) {
+            const attendingCount = comments.filter(c => c.attendance === 'hadir').length;
+            const notAttendingCount = comments.filter(c => c.attendance === 'tidak').length;
+            
+            document.getElementById('attendingCount').textContent = attendingCount;
+            document.getElementById('notAttendingCount').textContent = notAttendingCount;
+            document.getElementById('totalComments').textContent = comments.length;
+            document.getElementById('attendingCount').textContent = attendingCount;
+
+            // Tambahan untuk inline stats
+            document.getElementById('attendingInline').querySelector('span').textContent = attendingCount;
+            document.getElementById('notAttendingInline').querySelector('span').textContent = notAttendingCount;
+            document.getElementById('totalCommentsInline').querySelector('span').textContent = comments.length;
+
+        }
+
+        //Section 5
+        // Copy button functionality for gift section
+        document.addEventListener('DOMContentLoaded', function() {
+            const copyButtons = document.querySelectorAll('.copy-btn');
+            
+            copyButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const textToCopy = this.getAttribute('data-copy');
+                    navigator.clipboard.writeText(textToCopy).then(() => {
+                        // Change button style temporarily
+                        const originalText = this.innerHTML;
+                        this.innerHTML = '<i class="fas fa-check"></i> Tersalin!';
+                        this.classList.add('copied');
+                        
+                        setTimeout(() => {
+                            this.innerHTML = originalText;
+                            this.classList.remove('copied');
+                        }, 2000);
+                    }).catch(err => {
+                        console.error('Failed to copy text: ', err);
+                        alert('Gagal menyalin teks. Silakan salin manual.');
+                    });
+                });
+            });
+        });
+
+        // Music Player Toggle
+        const musicPlayer = document.getElementById('musicPlayer');
+        const bgMusic = document.getElementById('bgMusic');
+        let isPlaying = false;
+        
+        musicPlayer.addEventListener('click', function() {
+            if (isPlaying) {
+                bgMusic.pause();
+                musicPlayer.innerHTML = '<i class="fas fa-music"></i>';
+                musicPlayer.title = "Putar Musik";
+            } else {
+                bgMusic.play();
+                musicPlayer.innerHTML = '<i class="fas fa-pause"></i>';
+                musicPlayer.title = "Jeda Musik";
+            }
+            isPlaying = !isPlaying;
+        });
+
+        // Create more floating petals
+        function createPetals() {
+            const coverPage = document.getElementById('coverPage');
+            for (let i = 0; i < 10; i++) {
+                const petal = document.createElement('div');
+                petal.className = 'floating-petal';
+                petal.style.width = `${Math.random() * 20 + 15}px`;
+                petal.style.height = petal.style.width;
+                petal.style.top = `${Math.random() * 80 + 10}%`;
+                petal.style.left = `${Math.random() * 80 + 10}%`;
+                petal.style.animationDuration = `${Math.random() * 10 + 15}s`;
+                petal.style.animationDelay = `${Math.random() * 5}s`;
+                coverPage.appendChild(petal);
+            }
+        }
+        
+        createPetals();
+    </script>
+</body>
+</html>
