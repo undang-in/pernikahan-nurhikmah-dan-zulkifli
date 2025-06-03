@@ -1367,6 +1367,62 @@
         .delay-4 {
             animation-delay: 0.8s;
         }
+        /* Tambahkan di bagian CSS */
+        .notification {
+            margin-top: 1rem;
+            padding: 0.8rem;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: 500;
+            animation: fadeInUp 0.5s ease;
+            background: rgba(76, 175, 80, 0.1);
+            color: #4CAF50;
+            border: 1px solid #4CAF50;
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(10px);
+            height: 0;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+        .notification.show {
+            opacity: 1;
+            transform: translateY(0);
+            height: auto;
+            padding: 0.8rem;
+            margin-top: 1rem;
+        }
+
+        .btn-loading {
+            position: relative;
+            pointer-events: none;
+        }
+
+        .btn-loading:after {
+            content: "";
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            border: 3px solid transparent;
+            border-top-color: #ffffff;
+            border-radius: 50%;
+            animation: button-loading-spinner 1s ease infinite;
+        }
+
+        @keyframes button-loading-spinner {
+            from {
+                transform: rotate(0turn);
+            }
+            to {
+                transform: rotate(1turn);
+            }
+        }
     </style>
 </head>
 <body>
@@ -1573,6 +1629,7 @@
                         <button type="button" class="btn-secondary" id="stickerBtn"><i class="far fa-smile"></i> Tambah Stiker</button>
                         <button type="submit" class="btn-primary"><i class="fas fa-paper-plane"></i> Kirim Ucapan</button>
                     </div>
+                    <div class="notification" id="notification" style="display: none;"></div>
                     <!-- Tambahkan statistik di sini -->
                     <div class="inline-stats">
                         <div class="stat" id="attendingInline">
@@ -1710,15 +1767,23 @@
             loadComments();
             
             // Form submission
+            // Ganti bagian form submission dengan ini:
             document.getElementById('commentForm').addEventListener('submit', async function(e) {
                 e.preventDefault();
                 
                 const name = document.getElementById('name').value.trim();
                 const attendance = document.getElementById('attendance').value;
                 const commentText = document.getElementById('comment').value.trim();
+                const submitBtn = this.querySelector('button[type="submit"]');
+                const notification = document.getElementById('notification');
                 
                 if (name && commentText) {
                     try {
+                        // Tampilkan loading
+                        submitBtn.innerHTML = '';
+                        submitBtn.classList.add('btn-loading');
+                        submitBtn.disabled = true;
+                        
                         const formData = new FormData();
                         formData.append('name', name);
                         formData.append('attendance', attendance);
@@ -1735,17 +1800,37 @@
                             // Reset form
                             this.reset();
                             
+                            // Tampilkan notifikasi
+                            // Ganti bagian notifikasi dengan:
+                            notification.textContent = 'Ucapan Anda telah terkirim! Terima kasih.';
+                            notification.classList.add('show');
+
+                            // Sembunyikan notifikasi setelah 3 detik
+                            setTimeout(() => {
+                                notification.classList.remove('show');
+                            }, 3000);
+                            
                             // Reload komentar
                             loadComments();
-                            
-                            // Show success message
-                            alert('Ucapan Anda telah terkirim. Terima kasih!');
                         } else {
                             throw new Error(result.message || 'Gagal menyimpan data');
                         }
                     } catch (error) {
                         console.error('Error:', error);
-                        alert('Terjadi kesalahan saat mengirim ucapan: ' + error.message);
+                        notification.textContent = 'Gagal mengirim ucapan: ' + error.message;
+                        notification.style.backgroundColor = 'rgba(244, 67, 54, 0.1)';
+                        notification.style.color = '#F44336';
+                        notification.style.borderColor = '#F44336';
+                        notification.style.display = 'block';
+                        
+                        setTimeout(() => {
+                            notification.style.display = 'none';
+                        }, 3000);
+                    } finally {
+                        // Kembalikan tombol ke keadaan semula
+                        submitBtn.classList.remove('btn-loading');
+                        submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Kirim Ucapan';
+                        submitBtn.disabled = false;
                     }
                 }
             });
